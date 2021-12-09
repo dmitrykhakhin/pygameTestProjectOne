@@ -23,6 +23,8 @@ clock = pygame.time.Clock()
 # Цикл игры
 running = True
 while running:
+    # держим цикл на правильной скорости
+    clock.tick(FPS)
     # Ввод процесса (события)
     for event in pygame.event.get():
         # проверить закрытие окна
