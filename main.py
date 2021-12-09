@@ -23,10 +23,14 @@ clock = pygame.time.Clock()
 # Цикл игры
 running = True
 while running:
+    # Ввод процесса (события)
+    for event in pygame.event.get():
+        # проверить закрытие окна
+        if event.type == pygame.QUIT:
+            running = False
     # Рендеринг
     screen.fill(BLACK)
     # после отрисовки всего, переворачиваем экран
     pygame.display.flip()
-    # Ввод процесса (события)
     # Обновление
     # Визуализация (сборка)
