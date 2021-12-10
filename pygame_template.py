@@ -30,9 +30,11 @@ while running:
         # проверить закрытие окна
         if event.type == pygame.QUIT:
             running = False
+    # Обновление
+
     # Рендеринг
     screen.fill(BLACK)
     # после отрисовки всего, переворачиваем экран
     pygame.display.flip()
-    # Обновление
     # Визуализация (сборка)
+pygame.quit()
