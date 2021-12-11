@@ -19,6 +19,7 @@ pygame.mixer.init()  # для звука
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("My Game")
 clock = pygame.time.Clock()
+all_sprites = pygame.sprite.Group()
 
 # Цикл игры
 running = True
@@ -31,9 +32,11 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     # Обновление
+    all_sprites.update()
 
     # Рендеринг
     screen.fill(BLACK)
+    all_sprites.draw(screen)
     # после отрисовки всего, переворачиваем экран
     pygame.display.flip()
     # Визуализация (сборка)
