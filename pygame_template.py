@@ -22,6 +22,10 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = (WIDTH / 2, HEIGHT / 2)
 
+    def update(self):
+        self.rect.x += 5
+        if self.rect.left > WIDTH:
+            self.rect.right = 0
 
 # создаем игру и окно
 pygame.init()
